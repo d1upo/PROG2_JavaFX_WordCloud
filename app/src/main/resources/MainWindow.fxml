@@ -9,16 +9,16 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindowController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.prog2.application.MainWindowController">
    <children>
       <VBox alignment="CENTER" prefHeight="215.0" prefWidth="640.0" spacing="10.0" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="lableTitel" prefHeight="18.0" prefWidth="33.0" text="Label">
+            <Label fx:id="lableTitel" prefHeight="18.0" prefWidth="300.0">
                <padding>
                   <Insets top="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="textEingabe" maxWidth="300.0" text="textEingabe">
+            <TextField fx:id="textEingabe" maxWidth="300.0" text="Qrej">
                <VBox.margin>
                   <Insets left="100.0" right="100.0" top="25.0" />
                </VBox.margin>
@@ -30,16 +30,21 @@
                         <Insets right="12.5" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="leerenTextEingabe" mnemonicParsing="false" text="Löschen Eingabefeld">
+                  <Button fx:id="leerenTextEingabe" mnemonicParsing="false" onAction="#leerenTextEingabe" text="Löschen Eingabefeld">
                      <HBox.margin>
                         <Insets left="12.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="quit" mnemonicParsing="false" onAction="#quit" text="Quit">
+                     <HBox.margin>
+                        <Insets left="25.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
          </children>
       </VBox>
-      <TextArea fx:id="textHistory" layoutY="206.0" prefHeight="281.0" prefWidth="650.0" text="textHistory" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="206.0" />
+      <TextArea fx:id="textHistory" layoutY="206.0" prefHeight="281.0" prefWidth="650.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="206.0" />
    </children>
    <padding>
       <Insets bottom="20.0" />
